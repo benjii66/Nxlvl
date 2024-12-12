@@ -1,0 +1,9 @@
+{
+    "build": {
+      "command": "chmod +x ./node_modules/.bin/vite && npm run build",
+      "env": {
+        "NODE_VERSION": "18"
+      }
+    }
+  }
+  
