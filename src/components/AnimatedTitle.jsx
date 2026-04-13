@@ -1,11 +1,11 @@
 import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef, memo } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import clsx from "clsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AnimatedTitle = ({ title, containerClass }) => {
+const AnimatedTitle = memo(({ title, containerClass }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -52,6 +52,6 @@ const AnimatedTitle = ({ title, containerClass }) => {
       ))}
     </div>
   );
-};
+});
 
 export default AnimatedTitle;

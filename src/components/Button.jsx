@@ -1,6 +1,7 @@
+import React, { memo } from "react";
 import clsx from "clsx";
 
-const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
+const Button = memo(({ id, title, rightIcon, leftIcon, containerClass }) => {
   return (
     <button
       id={id}
@@ -23,6 +24,6 @@ const Button = ({ id, title, rightIcon, leftIcon, containerClass }) => {
       {rightIcon}
     </button>
   );
-};
+});
 
 export default Button;
